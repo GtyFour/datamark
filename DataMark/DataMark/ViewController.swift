@@ -299,11 +299,7 @@ class ViewController: UIViewController,WKNavigationDelegate,UIScrollViewDelegate
                     forComponent component: Int) -> String? {
         let str  = mark_list.object(at: row) as? String
         let deRange = str!.range(of: "?id=")
-//        let mark_ID = String(str!.suffix(from: deRange!.upperBound))
-//        let mark_ID = String(str!.formIndex(deRange!.upperBound, offsetBy: 8))
-//        let mark_ID = String(str![..<str!.index(deRange!.upperBound, offsetBy: 8)])
         let mark_ID = String(str![str!.index(deRange!.upperBound, offsetBy: 0)..<str!.index(deRange!.upperBound, offsetBy: 8)])
-
         return mark_ID
     }
     
@@ -319,7 +315,10 @@ class ViewController: UIViewController,WKNavigationDelegate,UIScrollViewDelegate
         print(picker_num)
         let picker_url = mark_list.object(at: picker_num) as? String
         print(picker_url)
-        current_page = URL(string: picker_url!)
+        
+        let deRange = picker_url!.range(of: "?id=")
+        let mark_ID = String(picker_url![picker_url!.index(deRange!.upperBound, offsetBy: 0)..<picker_url!.index(deRange!.upperBound, offsetBy: 8)])
+        current_page = URL(string: ("http://dm.trtos.com/web/datamark/index.php?id=" + mark_ID))
         print(current_page)
         if let htmlUrl = current_page {
             webView.load(URLRequest.init(url: htmlUrl))
