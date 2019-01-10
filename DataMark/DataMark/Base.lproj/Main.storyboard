@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DataMark" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Imf-ds-41N">
+                                <rect key="frame" x="0.0" y="20" width="375" height="595"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qoj-qg-gEj">
+                                <rect key="frame" x="272" y="623" width="87" height="30"/>
+                                <state key="normal" title="ChooseMark"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JWA-e0-6Ov">
+                                <rect key="frame" x="196" y="623" width="68" height="30"/>
+                                <state key="normal" title="SaveMark"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hpt-uJ-2or">
+                                <rect key="frame" x="128" y="623" width="48" height="30"/>
+                                <state key="normal" title="Decide"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kjl-iL-CIb">
+                                <rect key="frame" x="58" y="623" width="55" height="30"/>
+                                <state key="normal" title="Remove"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VNn-IQ-zHE">
+                                <rect key="frame" x="16" y="623" width="30" height="30"/>
+                                <state key="normal" title="Add"/>
+                            </button>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JQS-Jb-KDB">
+                                <rect key="frame" x="0.0" y="526" width="375" height="89"/>
+                            </pickerView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="JWA-e0-6Ov" firstAttribute="leading" secondItem="hpt-uJ-2or" secondAttribute="trailing" constant="20" id="3M3-jl-WFv"/>
+                            <constraint firstItem="JQS-Jb-KDB" firstAttribute="width" secondItem="Imf-ds-41N" secondAttribute="width" id="53b-H5-FFh"/>
+                            <constraint firstItem="qoj-qg-gEj" firstAttribute="baseline" secondItem="JWA-e0-6Ov" secondAttribute="baseline" id="7Wr-KR-wSV"/>
+                            <constraint firstItem="hpt-uJ-2or" firstAttribute="centerY" secondItem="JWA-e0-6Ov" secondAttribute="centerY" id="8dK-gg-RMX"/>
+                            <constraint firstItem="Imf-ds-41N" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" constant="-26" id="Bax-bd-NAh"/>
+                            <constraint firstItem="JQS-Jb-KDB" firstAttribute="bottom" secondItem="Imf-ds-41N" secondAttribute="bottom" id="DYu-Q3-RcR"/>
+                            <constraint firstItem="hpt-uJ-2or" firstAttribute="leading" secondItem="VNn-IQ-zHE" secondAttribute="trailing" constant="82" id="Erb-ON-ni9"/>
+                            <constraint firstItem="qoj-qg-gEj" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="F8O-Y7-SIG"/>
+                            <constraint firstItem="VNn-IQ-zHE" firstAttribute="centerY" secondItem="hpt-uJ-2or" secondAttribute="centerY" id="GkV-bO-IKd"/>
+                            <constraint firstItem="JWA-e0-6Ov" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" symbolic="YES" id="J8n-Oy-lY8"/>
+                            <constraint firstItem="hpt-uJ-2or" firstAttribute="leading" secondItem="Kjl-iL-CIb" secondAttribute="trailing" constant="15" id="LDK-Qj-Fqz"/>
+                            <constraint firstItem="Imf-ds-41N" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="UHV-dY-zH7"/>
+                            <constraint firstItem="JQS-Jb-KDB" firstAttribute="leading" secondItem="Imf-ds-41N" secondAttribute="trailing" constant="-375" id="YUT-uP-dgK"/>
+                            <constraint firstItem="qoj-qg-gEj" firstAttribute="top" secondItem="Imf-ds-41N" secondAttribute="bottom" constant="8" symbolic="YES" id="bgX-Iy-vDd"/>
+                            <constraint firstItem="Kjl-iL-CIb" firstAttribute="centerY" secondItem="hpt-uJ-2or" secondAttribute="centerY" id="ccD-kZ-BSQ"/>
+                            <constraint firstItem="qoj-qg-gEj" firstAttribute="leading" secondItem="JWA-e0-6Ov" secondAttribute="trailing" constant="8" symbolic="YES" id="eAu-fO-8W4"/>
+                            <constraint firstItem="Imf-ds-41N" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" id="f2b-OM-shh"/>
+                            <constraint firstItem="JQS-Jb-KDB" firstAttribute="centerX" secondItem="Imf-ds-41N" secondAttribute="centerX" id="fKh-Lw-Ytg"/>
+                            <constraint firstItem="JQS-Jb-KDB" firstAttribute="height" secondItem="Imf-ds-41N" secondAttribute="height" multiplier="0.15" id="nas-sk-aFC"/>
+                            <constraint firstItem="Imf-ds-41N" firstAttribute="height" secondItem="6Tk-OE-BBY" secondAttribute="height" constant="-52" id="wxY-ha-kRu"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="addBtn" destination="VNn-IQ-zHE" id="yof-TY-Wi9"/>
+                        <outlet property="chooseBtn" destination="qoj-qg-gEj" id="uJg-Po-Gb6"/>
+                        <outlet property="decideBtn" destination="hpt-uJ-2or" id="qbl-gU-G6B"/>
+                        <outlet property="pickerView" destination="JQS-Jb-KDB" id="hfa-ca-lXj"/>
+                        <outlet property="removeBtn" destination="Kjl-iL-CIb" id="D2d-X2-V5C"/>
+                        <outlet property="saveBtn" destination="JWA-e0-6Ov" id="9t7-2X-4CG"/>
+                        <outlet property="webView" destination="Imf-ds-41N" id="fXE-eb-bbH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="133.59999999999999" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+</document>
